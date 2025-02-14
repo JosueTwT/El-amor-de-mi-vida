@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Te amo</title>
+    <title>Sabías que te amo?</title>
     <link rel="stylesheet" href="styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -51,107 +51,24 @@
             }, 1000);
         });
     </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #ffe6f2;
-            color: #d63384;
-            overflow: hidden;
-            position: relative;
-        }
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        #message {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .album {
-            margin: 20px auto;
-            display: inline-block;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-        }
-        .album h2 {
-            color: #c2185b;
-        }
-        .album img {
-            width: 150px;
-            height: 150px;
-            margin: 5px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-        }
-        .heart {
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%) rotate(-45deg);
-            animation: floatUp 5s linear infinite;
-        }
-        .heart::before,
-        .heart::after {
-            content: "";
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            position: absolute;
-            border-radius: 50%;
-        }
-        .heart::before {
-            top: -10px;
-            left: 0;
-        }
-        .heart::after {
-            left: 10px;
-            top: 0;
-        }
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) rotate(-45deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) rotate(-45deg);
-                opacity: 0;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="background"></div>
     <div class="container">
-        <h1>Sabias que te amo?</h1>
+        <h1>Sabías que te amo?</h1>
         <div id="message">
             <p>Espera solo: <span id="countdown">30</span> segundos</p>
         </div>
         <div id="albums" style="display: none; flex-direction: column; align-items: center;">
             <div class="album">
-                <h2>Juntitos</h2>
+                <h2>Fotos juntitos</h2>
                 <img src="img1.png" alt="Foto 1">
                 <img src="img2.png" alt="Foto 2">
                 <img src="img3.png" alt="Foto 3">
                 <img src="img4.png" alt="Foto 4">
             </div>
             <div class="album">
-                <h2>Te ves hermosa (como siempre)</h2>
+                <h2>Dónde te ves hermosa (como siempre)</h2>
                 <img src="img5.png" alt="Foto 5">
                 <img src="img6.png" alt="Foto 6">
                 <img src="img7.png" alt="Foto 7">
@@ -168,3 +85,4 @@
     </div>
 </body>
 </html>
+
