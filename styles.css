@@ -3,7 +3,7 @@ body {
     text-align: center;
     background-color: #ffe6f2;
     color: #d63384;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
