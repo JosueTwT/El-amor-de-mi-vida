@@ -10,7 +10,6 @@
             let countdown = 30;
             const countdownElement = document.getElementById("countdown");
             const albumSection = document.getElementById("albums");
-            const body = document.body;
 
             function createHeart() {
                 const heart = document.createElement("div");
@@ -29,12 +28,16 @@
                 if (countdown <= 0) {
                     clearInterval(timer);
                     document.getElementById("message").style.display = "none";
-                    albumSection.style.display = "flex";
+                    albumSection.style.display = "block";
+
                     let delay = 0;
                     albumSection.querySelectorAll(".album").forEach((album, index) => {
                         setTimeout(() => {
                             album.style.opacity = "1";
                             album.style.transform = "translateY(0)";
+                            album.querySelector("h2").style.opacity = "1";
+                            album.querySelector("h2").style.transform = "translateY(0)";
+
                             let imgDelay = 1000;
                             album.querySelectorAll("img").forEach((img) => {
                                 setTimeout(() => {
@@ -44,7 +47,7 @@
                                 imgDelay += 2000;
                             });
                         }, delay);
-                        delay += 5000;
+                        delay += 8000;
                     });
                     setInterval(createHeart, 300);
                 }
@@ -59,7 +62,7 @@
         <div id="message">
             <p>Espera solo: <span id="countdown">30</span> segundos</p>
         </div>
-        <div id="albums" style="display: none; flex-direction: column; align-items: center;">
+        <div id="albums" style="display: none;">
             <div class="album">
                 <h2>Fotos juntitos</h2>
                 <img src="img1.png" alt="Foto 1">
@@ -85,4 +88,3 @@
     </div>
 </body>
 </html>
-
