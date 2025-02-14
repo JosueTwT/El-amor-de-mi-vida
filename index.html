@@ -16,7 +16,7 @@
                 heart.classList.add("heart");
                 heart.style.left = Math.random() * 100 + "vw";
                 heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-                document.querySelector(".background").appendChild(heart);
+                document.body.appendChild(heart);
                 setTimeout(() => {
                     heart.remove();
                 }, 5000);
@@ -29,25 +29,23 @@
                     clearInterval(timer);
                     document.getElementById("message").style.display = "none";
                     albumSection.style.display = "block";
-
                     let delay = 0;
-                    albumSection.querySelectorAll(".album").forEach((album, index) => {
+                    albumSection.querySelectorAll(".album").forEach((album) => {
                         setTimeout(() => {
                             album.style.opacity = "1";
                             album.style.transform = "translateY(0)";
                             album.querySelector("h2").style.opacity = "1";
                             album.querySelector("h2").style.transform = "translateY(0)";
-
                             let imgDelay = 1000;
                             album.querySelectorAll("img").forEach((img) => {
                                 setTimeout(() => {
                                     img.style.opacity = "1";
                                     img.style.transform = "translateY(0)";
                                 }, imgDelay);
-                                imgDelay += 2000;
+                                imgDelay += 1000;
                             });
                         }, delay);
-                        delay += 8000;
+                        delay += 4000;
                     });
                     setInterval(createHeart, 300);
                 }
@@ -56,7 +54,6 @@
     </script>
 </head>
 <body>
-    <div class="background"></div>
     <div class="container">
         <h1>Sabías que te amo?</h1>
         <div id="message">
@@ -64,25 +61,31 @@
         </div>
         <div id="albums" style="display: none;">
             <div class="album">
-                <h2>Fotos juntitos</h2>
-                <img src="img1.png" alt="Foto 1">
-                <img src="img2.png" alt="Foto 2">
-                <img src="img3.png" alt="Foto 3">
-                <img src="img4.png" alt="Foto 4">
+                <h2>💖 Fotos juntitos</h2>
+                <div class="photo-grid">
+                    <img src="img1.png" alt="Foto 1">
+                    <img src="img2.png" alt="Foto 2">
+                    <img src="img3.png" alt="Foto 3">
+                    <img src="img4.png" alt="Foto 4">
+                </div>
             </div>
             <div class="album">
-                <h2>Dónde te ves hermosa (como siempre)</h2>
-                <img src="img5.png" alt="Foto 5">
-                <img src="img6.png" alt="Foto 6">
-                <img src="img7.png" alt="Foto 7">
-                <img src="img8.png" alt="Foto 8">
+                <h2>❤️ Dónde te ves hermosa (como siempre)</h2>
+                <div class="photo-grid">
+                    <img src="img5.png" alt="Foto 5">
+                    <img src="img6.png" alt="Foto 6">
+                    <img src="img7.png" alt="Foto 7">
+                    <img src="img8.png" alt="Foto 8">
+                </div>
             </div>
             <div class="album">
-                <h2>De mis favoritas</h2>
-                <img src="img9.png" alt="Foto 9">
-                <img src="img10.png" alt="Foto 10">
-                <img src="img11.png" alt="Foto 11">
-                <img src="img12.png" alt="Foto 12">
+                <h2>💕 De mis favoritas</h2>
+                <div class="photo-grid">
+                    <img src="img9.png" alt="Foto 9">
+                    <img src="img10.png" alt="Foto 10">
+                    <img src="img11.png" alt="Foto 11">
+                    <img src="img12.png" alt="Foto 12">
+                </div>
             </div>
         </div>
     </div>
